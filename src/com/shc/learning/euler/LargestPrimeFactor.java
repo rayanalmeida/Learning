@@ -39,7 +39,7 @@ public class LargestPrimeFactor {
 
 		BigInteger divider = new BigInteger("2");
 		while(maxDivider.compareTo(divider) >= 0) {
-			if(hasRemainder(quotient, divider)) {
+			if(!hasRemainder(quotient, divider)) {
 				System.out.println("not prime");
 				return false;
 			}
@@ -60,6 +60,6 @@ public class LargestPrimeFactor {
 		BigInteger[] bi = number.divideAndRemainder(divider);
 		BigInteger r = bi[1];
 
-		return  r.compareTo(BigInteger.ZERO) == 0;
+		return  r.compareTo(BigInteger.ZERO) != 0;
 	}
 }
