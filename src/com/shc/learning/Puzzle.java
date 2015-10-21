@@ -12,7 +12,7 @@ public class Puzzle {
 	 *  0,11; 1,2; 3,10; 4,5; 6,9; 7,8; 
 	 */
 	public static void main(String[] args) {
-		String puzzle = "[[[[][[][[]]]]";
+		String puzzle = "[[][[][[]][[]]]]";
 		Stack<Integer> repo = new Stack<Integer>(); 
 		int i=0;
 		try {

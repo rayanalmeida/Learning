@@ -6,8 +6,11 @@ public class StringTests {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(replace("this is won<salescheck>derful", "<salescheck>", "12345"));
-		System.out.println("this is won<salescheck>derful".replaceAll("<salescheck>", "12345"));
+//		System.out.println(replace("this is won<salescheck>derful", "<salescheck>", "12345"));
+//		System.out.println("this is won<salescheck>derful".replaceAll("<salescheck>", "12345"));
+		//StringAndChar();
+		//subString();
+		new StringTests().testSubString();
 
 	}
 	
@@ -28,6 +31,47 @@ public class StringTests {
 			return sb.toString();
 		}
 		else return "";
+	}
+	
+	public static void StringAndChar() {
+		String str = "Y";
+		char ch = 'Y';
+		boolean flag = str.equals(ch);
+		System.out.println(flag);
+		
+		flag = str.equals(String.valueOf(ch));
+		System.out.println(flag);
+		
+		flag = str.equals(String.valueOf(null));
+		System.out.println(flag);
+		
+		
+	}
+	
+	public static void subString() {
+		String source = "catcowcat";
+		String pattern = "cow";
+		
+		int count = 0;
+		
+		while(true) {
+			String src = source.replaceFirst(pattern, "");
+			if(src == source)
+				break;
+			count++;
+			source = src;
+		}
+		System.out.println(count);
+		
+	}
+	
+	private void testSubString() {
+			String source = "07470-990";
+
+			int i = source.indexOf("-");
+			String s = source.substring(0,i);
+			System.out.println(i);
+			System.out.println("ggg"+s.trim()+"fff");
 	}
 
 }

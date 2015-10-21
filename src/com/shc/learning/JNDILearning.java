@@ -1,6 +1,5 @@
 package com.shc.learning;
 
-import java.io.File;
 import java.util.Hashtable;
 
 import javax.naming.Context;
@@ -25,7 +24,7 @@ public class JNDILearning {
 			Long l = 12345L;
 			
 			Reference ref = new Reference(String.class.toString());
-			ref.add()
+			//ref.add()
 			
 			Context ctx = new InitialContext(env);
 			ctx.bind("String", ref);
